@@ -12,5 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send Greetings
-      run: |
-        echo "Hello ${{ github.events.inputs.name }}"
+        run: |
+          echo "Hello ${{ github.events.inputs.name }}"
