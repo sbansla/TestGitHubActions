@@ -8,9 +8,9 @@ on:
         default: "World"
         required: true
 jobs:
-  check-bats-version:
+  greeting-persion:
     runs-on: ubuntu-latest
     steps:
       - name: Send Greetings
         run: |
-          echo "Hello ${{ github.events.inputs.name }}"
+          echo Hello ${{ inputs.name }}
