@@ -8,7 +8,6 @@ on:
         default: "World"
         required: true
 jobs:
-jobs:
   job1:
     runs-on: ubuntu-latest
     # Map a step output to a 'job output'
