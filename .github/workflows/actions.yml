@@ -19,8 +19,8 @@ jobs:
         run: echo "::set-output name=test::world"
       - id: step2
         run: |
-        echo "::set-output name=test::hello"
-        echo "::set-output name=test2::${{needs.step1.test}}"
+            echo "::set-output name=test::hello"
+            echo "::set-output name=test2::${{needs.step1.test}}"
   job2:
     runs-on: ubuntu-latest
     needs: job1
