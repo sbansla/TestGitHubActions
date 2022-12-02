@@ -34,7 +34,7 @@ jobs:
           echo ${{ steps.semantic-release.outputs.TAG_NAME }}
           echo ${{ steps.semantic-release.outputs }}
       - name: Verify rc branch
-        if: contains('${{steps.semantic-release.outputs.TAG_NAME}}', 'rc' )
+        if: contains(steps.semantic-release.outputs.TAG_NAME, 'rc' )
         run: echo "This is rc release"
       - name: verify release required
         if: ${{steps.semantic-release.outputs.TAG_NAME == ''}}
