@@ -16,4 +16,5 @@ jobs:
           node-version: '14'
       - name: List all files after installation
         run: |
+            npm install
             ls
