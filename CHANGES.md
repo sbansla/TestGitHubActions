@@ -1,3 +1,10 @@
+### [1.0.2](https://github.com/sbansla/TestGitHubActions/compare/1.0.1...1.0.2) (2022-12-02)
+
+
+### Library - Chores
+
+* print sematic release output object ([4106576](https://github.com/sbansla/TestGitHubActions/commit/41065760370d14119b85133503314e20a2a339e2))
+
 ### [1.0.1](https://github.com/sbansla/TestGitHubActions/compare/1.0.0...1.0.1) (2022-12-02)
 
 
