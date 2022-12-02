@@ -9,9 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@semantic-release/changelog": "github:semantic-release/changelog",
-    "@semantic-release/exec": "github:semantic-release/exec",
-    "@semantic-release/git": "github:semantic-release/git",
     "semantic-release": "^19.0.5"
   }
 }
