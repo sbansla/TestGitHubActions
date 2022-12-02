@@ -1,3 +1,11 @@
+### [1.0.4-rc.3](https://github.com/sbansla/TestGitHubActions/compare/1.0.4-rc.2...1.0.4-rc.3) (2022-12-02)
+
+
+### Library - Chores
+
+* c1 ([e4f35f6](https://github.com/sbansla/TestGitHubActions/commit/e4f35f6825f507d0983b15457fd71f4357dffd52))
+* c1 ([e6979ee](https://github.com/sbansla/TestGitHubActions/commit/e6979ee3e09061e9179f97b39ed48327351ba431))
+
 ### [1.0.4-rc.2](https://github.com/sbansla/TestGitHubActions/compare/1.0.4-rc.1...1.0.4-rc.2) (2022-12-02)
 
 
