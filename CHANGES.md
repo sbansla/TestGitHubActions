@@ -1,3 +1,11 @@
+### [1.0.5](https://github.com/sbansla/TestGitHubActions/compare/1.0.4...1.0.5) (2022-12-02)
+
+
+### Library - Chores
+
+* c1 ([e6979ee](https://github.com/sbansla/TestGitHubActions/commit/e6979ee3e09061e9179f97b39ed48327351ba431))
+* quotes around rc ([2f66470](https://github.com/sbansla/TestGitHubActions/commit/2f66470dc9a6c66679b159fc8e0886e16ca9472b))
+
 ### [1.0.4](https://github.com/sbansla/TestGitHubActions/compare/1.0.3...1.0.4) (2022-12-02)
 
 
