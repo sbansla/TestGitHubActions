@@ -1,3 +1,18 @@
+### [1.0.4](https://github.com/sbansla/TestGitHubActions/compare/1.0.3...1.0.4) (2022-12-02)
+
+
+### Library - Chores
+
+* added if rc ([47ab280](https://github.com/sbansla/TestGitHubActions/commit/47ab2805cc509449cf8f397af9917ebb860a382d))
+* added rc branch ([ee8dfb7](https://github.com/sbansla/TestGitHubActions/commit/ee8dfb788e6cae5545cfd673b48537885d6ac676))
+* c1 ([2bec4dc](https://github.com/sbansla/TestGitHubActions/commit/2bec4dc022a5205beea464e724c944d3c7de613f))
+* c1 ([51c0e1a](https://github.com/sbansla/TestGitHubActions/commit/51c0e1ab3b83524a20d714289473261361fdb6ee))
+* c1 ([318c8f6](https://github.com/sbansla/TestGitHubActions/commit/318c8f6845527f730d70c9e2cdfbe646a731b53f))
+* empty rc commit ([d9dd6db](https://github.com/sbansla/TestGitHubActions/commit/d9dd6dbd4fd78e308acde73f4ba2b2a73cfa693c))
+* merging to main ([4fecfb0](https://github.com/sbansla/TestGitHubActions/commit/4fecfb0379d7256d22483c7d6fd9a994af89401e))
+* **release:** set `package.json` to 1.0.4-rc.1 [skip ci] ([1ec8739](https://github.com/sbansla/TestGitHubActions/commit/1ec87398387a4443bab8296e9600409eb133d595))
+* **release:** set `package.json` to 1.0.4-rc.2 [skip ci] ([78df523](https://github.com/sbansla/TestGitHubActions/commit/78df5234c61d332ee4cdaeb54765c38c018056fe))
+
 ### [1.0.4-rc.2](https://github.com/sbansla/TestGitHubActions/compare/1.0.4-rc.1...1.0.4-rc.2) (2022-12-02)
 
 
