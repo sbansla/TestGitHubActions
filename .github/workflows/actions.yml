@@ -18,3 +18,6 @@ jobs:
         run: |
           echo "Branch name is: ${{steps.extract_branch.outputs.branch}}"
           echo $GITHUB_SHA
+      - name: Semantic Release runs
+        id: semantic-release
+        run: DEBUG=semantic-release:* $(npm bin)/semantic-release  -t \${version}
