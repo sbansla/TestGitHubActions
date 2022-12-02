@@ -1,3 +1,10 @@
+### [1.0.1](https://github.com/sbansla/TestGitHubActions/compare/1.0.0...1.0.1) (2022-12-02)
+
+
+### Library - Chores
+
+* print tag name ([38b047f](https://github.com/sbansla/TestGitHubActions/commit/38b047f451bd7189b7e1b2e11f9cce5939156739))
+
 ## 1.0.0 (2022-12-02)
 
 
