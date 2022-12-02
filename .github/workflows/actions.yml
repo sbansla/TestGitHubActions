@@ -5,6 +5,8 @@ on:
 jobs:
   check-files:
     runs-on: ubuntu-latest
+    outputs:
+      tag-name: ${{ steps.semantic-release.outputs.TAG_NAME }}
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v3
@@ -27,3 +29,5 @@ jobs:
         run: DEBUG=semantic-release:* $(npm bin)/semantic-release  -t \${version}
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
+      - name: Print tag name
+        run: echo ${{ steps.semantic-release.outputs.TAG_NAME }}
