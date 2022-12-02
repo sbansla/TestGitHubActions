@@ -1,7 +1,11 @@
 name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      formula:
+        description: 'Artifact Prefix'
+        default: twilio
 jobs:
   check-files:
     runs-on: ubuntu-latest
@@ -20,25 +24,26 @@ jobs:
       - name: Extract branch name
         id: extract_branch
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-      - name: Display branch name
+      - name: Display branch name and awk result
         run: |
           echo "Branch name is: ${{steps.extract_branch.outputs.branch}}"
           echo $GITHUB_SHA
-      - name: Semantic Release runs
-        id: semantic-release
-        run: DEBUG=semantic-release:* $(npm bin)/semantic-release  -t \${version}
-        env:
-          GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
-      - name: Print tag name
-        run: | 
-          echo ${{ steps.semantic-release.outputs.TAG_NAME }}
-          echo ${{ steps.semantic-release.outputs }}
-      - name: Verify rc branch
-        if: contains(steps.semantic-release.outputs.TAG_NAME, 'rc' )
-        run: echo "This is rc release"
-      - name: verify release required
-        if: ${{steps.semantic-release.outputs.TAG_NAME == ''}}
-        uses: actions/github-script@v3
-        with:
-          script: |
-            core.setFailed('There are no relevant changes, so no new version is released.')
+          echo ${{ github.event.inputs.formula }}_$(awk -F- '{print $1}'
+      # - name: Semantic Release runs
+      #   id: semantic-release
+      #   run: DEBUG=semantic-release:* $(npm bin)/semantic-release  -t \${version}
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
+      # - name: Print tag name
+      #   run: | 
+      #     echo ${{ steps.semantic-release.outputs.TAG_NAME }}
+      #     echo ${{ steps.semantic-release.outputs }}
+      # - name: Verify rc branch
+      #   if: contains(steps.semantic-release.outputs.TAG_NAME, 'rc' )
+      #   run: echo "This is rc release"
+      # - name: verify release required
+      #   if: ${{steps.semantic-release.outputs.TAG_NAME == ''}}
+      #   uses: actions/github-script@v3
+      #   with:
+      #     script: |
+      #       core.setFailed('There are no relevant changes, so no new version is released.')
