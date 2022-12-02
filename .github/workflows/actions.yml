@@ -17,3 +17,4 @@ jobs:
       - name: Display branch name
         run: |
           echo "Branch name is: ${{steps.extract_branch.outputs.branch}}"
+          echo $GITHUB_SHA
