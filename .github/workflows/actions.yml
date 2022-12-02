@@ -25,3 +25,5 @@ jobs:
       - name: Semantic Release runs
         id: semantic-release
         run: DEBUG=semantic-release:* $(npm bin)/semantic-release  -t \${version}
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
