@@ -30,7 +30,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
       - name: Print tag name
-        run: echo ${{ steps.semantic-release.outputs.TAG_NAME }}
+        run: | 
+          echo ${{ steps.semantic-release.outputs.TAG_NAME }}
+          echo $ {{ steps.semantic-release.outputs }}
       - name: verify release required
         if: ${{steps.semantic-release.outputs.TAG_NAME == ''}}
         uses: actions/github-script@v3
