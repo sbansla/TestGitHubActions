@@ -7,10 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repo
-        uses: actions/checkout@v2
-      - name: Pull
+        uses: actions/checkout@v3
+      - name: Node install
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      - name: Install Packages
         run: |
-          git pull
+          npm ci
       - name: Extract branch name
         id: extract_branch
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
