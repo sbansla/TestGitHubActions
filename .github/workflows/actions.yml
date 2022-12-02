@@ -10,3 +10,10 @@ jobs:
       - name: List all files
         run: |
             ls
+      - name: Install node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: List all files after installation
+        run: |
+            ls
