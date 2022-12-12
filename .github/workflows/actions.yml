@@ -24,11 +24,11 @@ jobs:
       - name: Extract branch name
         id: extract_branch
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-      - name: Display branch name and awk result
-        run: |
-          echo "Branch name is: ${{steps.extract_branch.outputs.branch}}"
-          echo $GITHUB_SHA
-          echo ${{ github.event.inputs.formula }}_$(awk -F- '{print $1}'
+#      - name: Display branch name and awk result
+#        run: |
+#          echo "Branch name is: ${{steps.extract_branch.outputs.branch}}"
+#          echo $GITHUB_SHA
+#          echo ${{ github.event.inputs.formula }}_$(awk -F- '{print $1}'
       - name: Run app file
         run: |
           node app.js
