@@ -29,6 +29,9 @@ jobs:
           echo "Branch name is: ${{steps.extract_branch.outputs.branch}}"
           echo $GITHUB_SHA
           echo ${{ github.event.inputs.formula }}_$(awk -F- '{print $1}'
+      - name: Run app file
+        run: |
+          node app.js
       # - name: Semantic Release runs
       #   id: semantic-release
       #   run: DEBUG=semantic-release:* $(npm bin)/semantic-release  -t \${version}
