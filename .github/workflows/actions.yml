@@ -1,5 +1,5 @@
 name: learn-github-actions
-run-name: ${{ github.ref }} is learning GitHub Actions in branch ${{ github.branch }}
+run-name: ${{ github.actor }} is learning GitHub Actions in branch ${{ github.ref_branch }} whole object ${{github}}
 on:
   workflow_dispatch:
     inputs:
