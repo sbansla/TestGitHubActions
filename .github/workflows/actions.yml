@@ -1,11 +1,14 @@
 name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions in branch ${{GITHUB_REF#refs/heads/}}
+run-name: ${{ github.actor }} is learning GitHub Actions in branch
 on:
   workflow_dispatch:
     inputs:
       formula:
         description: 'Artifact Prefix'
         default: twilio
+      branch:
+        description: 'Branch name'
+        default: main
 jobs:
   check-files:
     runs-on: ubuntu-latest
