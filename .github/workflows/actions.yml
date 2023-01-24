@@ -32,7 +32,7 @@ jobs:
       - name: Run app file
         run: |
           node app.js
-      - name: Trigger CLI token validation workflow
+      - name: Trigger test workflow
         run: |
           fileName="$GITHUB_WORKSPACE/.github/scripts/trigger-workflow.js"
           node -e "require('$fileName').triggerWorkflow()"
