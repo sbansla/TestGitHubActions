@@ -20,3 +20,7 @@ jobs:
           (New-Object System.Net.WebClient).DownloadFile('https://get.scoop.sh', 'scoop.ps1') 
           ./scoop.ps1 -RunAsAdmin
           echo "$env:SCOOP\shims" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+      - name: Running ps1 commands
+        run: |
+          if(!$env:SCOOP_HOME) { $env:SCOOP_HOME = Resolve-Path (scoop prefix scoop) }
+          $env:SCOOP_HOME
