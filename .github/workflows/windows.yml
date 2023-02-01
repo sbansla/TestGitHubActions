@@ -24,3 +24,5 @@ jobs:
         run: |
           if(!$env:SCOOP_HOME) { $env:SCOOP_HOME = Resolve-Path (scoop prefix scoop) }
           $env:SCOOP_HOME
+          $checkver = "$env:SCOOP_HOME/bin/checkver.ps1"
+          $env:checkver
