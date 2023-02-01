@@ -26,3 +26,6 @@ jobs:
           $env:SCOOP_HOME
           $checkver = "$env:SCOOP_HOME/bin/checkver.ps1"
           $env:checkver
+          $dir = "$psscriptroot/../" # checks the parent dir
+          Invoke-Expression -command "& '$checkver' -dir '$dir' $($args | ForEach-Object { "$_ " }) -Update"
+
