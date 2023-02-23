@@ -10,6 +10,10 @@ jobs:
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v3
+      - name: Display versions
+        run: |
+          echo node -v
+          echo npm -v
       - name: Install Packages
         run: |
           rm -f package-lock.json
