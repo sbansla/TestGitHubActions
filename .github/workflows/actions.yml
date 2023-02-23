@@ -4,7 +4,7 @@ on:
   workflow_dispatch
 jobs:
   check-files:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     outputs:
       tag-name: ${{ steps.semantic-release.outputs.TAG_NAME }}
     steps:
