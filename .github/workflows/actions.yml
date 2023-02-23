@@ -4,7 +4,7 @@ on:
   workflow_dispatch
 jobs:
   check-files:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     outputs:
       tag-name: ${{ steps.semantic-release.outputs.TAG_NAME }}
     steps:
@@ -16,7 +16,9 @@ jobs:
           node-version: 18
       - name: Install Packages
         run: |
-          npm i
+          rm -rf node_modules
+          rm -f package-lock.json
+          npm install --no-optional
       - name: Extract branch name
         id: extract_branch
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
