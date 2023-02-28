@@ -17,34 +17,31 @@ jobs:
       - name: Install Packages
         run: |
           rm -f package-lock.json
-          npm install --no-optional
-          cd node_modules
-          ls
-      - name: Extract branch name
-        id: extract_branch
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-      - name: Display branch name
-        run: |
-          echo "Branch name is: ${{steps.extract_branch.outputs.branch}}"
-          echo $GITHUB_SHA
-          ls /home/runner/work/_temp/
-          which bash
-      - name: Semantic Release runs
-        id: semantic-release
-        run: DEBUG=semantic-release:* npx semantic-release  -t \${version}
-        #run: DEBUG=semantic-release:* $(npm bin)/semantic-release  -t \${version}
-        env:
-          GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
-      - name: Print tag name
-        run: | 
-          echo ${{ steps.semantic-release.outputs.TAG_NAME }}
-          echo ${{ steps.semantic-release.outputs }}
+          npm install
+#      - name: Extract branch name
+#        id: extract_branch
+#        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+#      - name: Display branch name
+#        run: |
+#          echo "Branch name is: ${{steps.extract_branch.outputs.branch}}"
+#          echo $GITHUB_SHA
+#          ls /home/runner/work/_temp/
+#          which bash
+#      - name: Semantic Release runs
+#        id: semantic-release
+#        run: DEBUG=semantic-release:* npx semantic-release  -t \${version}
+#        #run: DEBUG=semantic-release:* $(npm bin)/semantic-release  -t \${version}
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
+#      - name: Print tag name
+#        run: | 
+#          echo ${{ steps.semantic-release.outputs.TAG_NAME }}
+#          echo ${{ steps.semantic-release.outputs }}
       - name: Verify rc branch
-        if: contains(steps.semantic-release.outputs.TAG_NAME, 'rc' )
-        run: echo "This is rc release"
-      - name: verify release required
-        if: ${{steps.semantic-release.outputs.TAG_NAME == ''}}
-        uses: actions/github-script@v3
-        with:
-          script: |
-            core.setFailed('There are no relevant changes, so no new version is released.')
+        run: echo "This is test run 1"
+#      - name: verify release required
+#        if: ${{steps.semantic-release.outputs.TAG_NAME == ''}}
+#        uses: actions/github-script@v3
+#        with:
+#          script: |
+#            core.setFailed('There are no relevant changes, so no new version is released.')
