@@ -38,7 +38,7 @@ jobs:
 #          echo ${{ steps.semantic-release.outputs.TAG_NAME }}
 #          echo ${{ steps.semantic-release.outputs }}
       - name: Verify rc branch
-        run: echo "This is test run 1"
+        run: echo "This is test run 2"
 #      - name: verify release required
 #        if: ${{steps.semantic-release.outputs.TAG_NAME == ''}}
 #        uses: actions/github-script@v3
