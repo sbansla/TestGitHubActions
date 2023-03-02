@@ -14,6 +14,7 @@ jobs:
         run: |
           node -v
           npm -v
+          brew install nvm
           nvm -v
           nvm use 16
           node -v
