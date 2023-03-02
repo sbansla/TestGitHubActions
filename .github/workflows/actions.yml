@@ -18,10 +18,8 @@ jobs:
         run: |
           node -v
           npm -v
-      - name: Install Packages
-        run: |
-          rm -f package-lock.json
-          npm install
+      - run: source .github/scripts/test.sh
+
 #      - name: Extract branch name
 #        id: extract_branch
 #        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
