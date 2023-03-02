@@ -4,12 +4,16 @@ on:
   workflow_dispatch
 jobs:
   check-files:
-    runs-on: macos-11.0
+    runs-on: macos-11
     outputs:
       tag-name: ${{ steps.semantic-release.outputs.TAG_NAME }}
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
       - name: Display versions
         run: |
           node -v
