@@ -1,0 +1,21 @@
+name: page-2
+run-name: ${{ github.actor }} page 2
+on:
+  workflow_dispatch
+jobs:
+  oclif-release:
+    name: Publish for ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-latest
+            asset_name: twilio-v${{ github.event.inputs.tag-name }}
+            command_name: echo "hello world"
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          make install
+          node -v
+          ${{ matrix.command_name }}
