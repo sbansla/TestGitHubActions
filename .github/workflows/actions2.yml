@@ -10,7 +10,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macos-latest
+          - os: ubuntu-latest
             asset_name: twilio-v${{ github.event.inputs.tag-name }}
             command_name: echo "hello world"
     steps:
