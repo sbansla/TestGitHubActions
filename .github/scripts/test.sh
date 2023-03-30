@@ -1,3 +1,5 @@
 #!/bin/bash
 
-sleep 15;
+echo 'starting script...'
+sleep 5;
+echo 'ending script...'

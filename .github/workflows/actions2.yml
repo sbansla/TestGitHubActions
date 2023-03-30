@@ -21,4 +21,4 @@ jobs:
           node .github/scripts/test_child_process.js
       - name: Post child process
         run: |
-          echo: "Ending script"
+          echo "Ending script"
