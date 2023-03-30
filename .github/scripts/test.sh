@@ -1,3 +1,5 @@
-echo "Hey how are  you ?"
-echo "Display node verison"
-node -v
+#!/bin/bash
+
+echo 'starting script...'
+sleep 5;
+echo 'ending script...'
