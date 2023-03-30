@@ -1,7 +1,7 @@
 const {spawn} = require('child_process');
 
 const triggerAndWait = async () => {
-    const child = spawn('bash', ['test.sh']);
+    const child = spawn('bash', ['.github/scripts/test.sh']);
 
     child.stdout.on('data', (data) => {
         console.log(`stdout: ${data}`)
