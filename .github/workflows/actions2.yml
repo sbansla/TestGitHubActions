@@ -3,25 +3,21 @@ run-name: ${{ github.actor }} page 2
 on:
   workflow_dispatch
 jobs:
-  oclif-release:
-    name: Running on ubuntu-latest
+  job1:
+    name: Running job1
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16.x'
-      - name: Display node version
-        run: |
-          echo "Print node version"
-          node -v
       - name: run child process
         run: |
           node .github/scripts/test_child_process.js
-      - name: Sleep for 30 seconds
-        run: sleep 60s
-        shell: bash
-      - name: Post child process
+      
+  job2:
+    name: Running job2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Step1 from job2
         run: |
-          echo "Ending script"
+          echo "Ending job2"
+        
