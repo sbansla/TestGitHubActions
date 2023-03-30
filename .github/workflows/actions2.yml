@@ -19,6 +19,9 @@ jobs:
       - name: run child process
         run: |
           node .github/scripts/test_child_process.js
+      - name: Sleep for 30 seconds
+        run: sleep 60s
+        shell: bash
       - name: Post child process
         run: |
           echo "Ending script"
