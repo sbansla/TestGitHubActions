@@ -4,23 +4,21 @@ on:
   workflow_dispatch
 jobs:
   oclif-release:
-    name: Publish for ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - os: ubuntu-latest
-            asset_name: twilio-v${{ github.event.inputs.tag-name }}
-            command_name: echo "hello world"
+    name: Running on ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '16.x'
-      - run: |
+      - name: Display node version
+        run: |
+          echo "Print node version"
           node -v
-          ${{ matrix.command_name }}
-      - run: |
+      - name: run child process
+        run: |
           node .github/scripts/test_child_process.js
+      - name: Post child process
+        run: |
+          echo: "Ending script"
