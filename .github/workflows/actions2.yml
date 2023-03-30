@@ -23,4 +23,4 @@ jobs:
           node -v
           ${{ matrix.command_name }}
       - run: |
-        node .github/scripts/test_child_process.js
+          node .github/scripts/test_child_process.js
