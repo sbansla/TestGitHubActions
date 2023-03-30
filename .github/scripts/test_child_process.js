@@ -21,9 +21,9 @@ const triggerAndWait = async () => {
         console.log(`Done ...`);
     })
 
-    console.log("Ending script...")
+    console.log("Ending script test child process...")
 }
-
+triggerAndWait();
 
 module.exports = {
     triggerAndWait
