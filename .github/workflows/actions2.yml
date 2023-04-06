@@ -3,18 +3,17 @@ run-name: ${{ github.actor }} page 2
 on:
   workflow_dispatch
 jobs:
-  job1:
-    name: Running job1
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: run child process
-        run: |
-          node .github/scripts/test_child_process.js
+#  job1:
+#    name: Running job1
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#      - name: run child process
+#        run: |
+#          node .github/scripts/test_child_process.js
       
   job2:
     name: Running job2
-    needs: [job1]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,5 +22,5 @@ jobs:
           echo "Ending job2"
       - name: Display tag
         run: |
-          echo ${github.ref_type}
+          echo github.ref_type
         
