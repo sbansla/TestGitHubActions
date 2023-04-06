@@ -21,4 +21,7 @@ jobs:
       - name: Step1 from job2
         run: |
           echo "Ending job2"
+      - name: Display tag
+        run: |
+          echo ${github.ref_type}
         
