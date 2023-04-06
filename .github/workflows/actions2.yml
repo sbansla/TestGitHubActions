@@ -22,5 +22,5 @@ jobs:
           echo "Ending job2"
       - name: Display tag
         run: |
-          echo github.ref_type
+          echo "Ref Type: ${{ github.ref_type }}"
         
