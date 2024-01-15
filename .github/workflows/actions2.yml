@@ -19,10 +19,10 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '3.1.x'
       - name: Display
         run: ls /usr/share/dotnet/sdk/
-      - name: Remove faulty SDK version
-        run: sudo rm -rf /usr/share/dotnet/sdk/7*
+      # - name: Remove faulty SDK version
+      #   run: sudo rm -rf /usr/share/dotnet/sdk/7*
       - name: Get installed dotnet version
         run: dotnet --version
