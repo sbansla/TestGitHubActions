@@ -1,9 +1,7 @@
 name: Get Tag
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch
 
 jobs:
   get-latest-tag:
