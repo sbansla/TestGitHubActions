@@ -41,7 +41,7 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v3
         with:
-          global-json-file: global.json
+          global-json-file: .github\workflows\global.json
       - name: Display
         run: dotnet --info
       - name: Get installed dotnet version
