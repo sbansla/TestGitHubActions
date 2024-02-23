@@ -33,6 +33,8 @@ jobs:
     name: Running job on windows
     runs-on: windows-latest
     steps:
+      - name: Check Current Directory
+        run: pwd
       - name: List Files
         run: dir
       - name: Setup .NET Core SDK
