@@ -28,3 +28,16 @@ jobs:
         run: ls /usr/share/dotnet/sdk/
       - name: Get installed dotnet version
         run: dotnet --version
+
+  job3:
+    name: Running job on windows
+    runs-on: windows-latest
+    steps:          
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.103'
+      - name: Display
+        run: dotnet --info
+      - name: Get installed dotnet version
+        run: dotnet --version
