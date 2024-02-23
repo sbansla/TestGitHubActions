@@ -32,7 +32,9 @@ jobs:
   job3:
     name: Running job on windows
     runs-on: windows-latest
-    steps:          
+    steps:
+      - name: List Files
+        run: dir
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v3
         with:
