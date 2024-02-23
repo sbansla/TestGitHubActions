@@ -39,7 +39,7 @@ jobs:
       - name: List Files
         run: dir
       - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v3
         with:
           global-json-file: .github/scripts/global.json
       - name: Display
