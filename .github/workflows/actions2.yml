@@ -33,6 +33,7 @@ jobs:
     name: Running job on windows
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Check Current Directory
         run: pwd
       - name: List Files
